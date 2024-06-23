@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div
-        className="calendly-inline-widget"
+        className="calendly-inline-widget w-full h-full"
         data-url="https://calendly.com/siddheshjungade/30min?primary_color=121212"
       ></div>
       <script
