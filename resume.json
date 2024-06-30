@@ -1,0 +1,91 @@
+{
+    "link": [
+      "https://twitter.com/siddheshjungade",
+      "mailto:siddheshjungade@gmail.com",
+      "https://github.com/siddheshJungade",
+      "https://www.linkedin.com/in/siddhesh-jungade/",
+      "https://brothepro.hashnode.dev/",
+      "https://www.instagram.com/siddheshjungade/"
+    ],
+    "intro": ["Little Info About Me", "About"],
+    "education": {
+      "intro": ["Education", "Acadamic"],
+      "work": [
+        {
+          "Institute": "Government Collage Of Engineering,Yavatmal",
+          "Course": "Bachelor of Technology Computer Science",
+          "year": "2021 - 2022"
+        }
+      ]
+    },
+    "Experience": {
+      "intro": ["Experience", "Work"],
+      "work": [
+        {
+          "title": "Software Development Intern",
+          "organization": "Keen Embedded",
+          "website": "https://www.keenembed.com/",
+          "time": "(Jul 2021 - Present)",
+          "desc": [
+            "Worked on different Python and C++ project like Smart Car parking System using Python, Raspberry Pi 3 and RFID.",
+            "File transfer System using Python, Socket, Tikenter",
+            "Build KeenEmbedded Website"
+          ]
+        },
+        {
+          "title": "Python Intern",
+          "organization": "Uptrick Services Pvt. Ltd",
+          "website": "https://uptricksservices.com/",
+          "time": "(Jun 2019 - Jul 2019 )",
+          "desc": [
+            "Python intern and trainee where we build a web app using Django",
+            "Build WhatsApp bulk message shearing system using Python"
+          ]
+        }
+      ]
+    },
+    "Projects": {
+      "intro": ["Project", "What I made"],
+      "work": [
+        {
+          "title": "Smart Car Parking Using RFID",
+          "tech": "IOT & Python",
+          "website": "https://www.github.com/siddheshJungade",
+          "desc": [
+            "Developed a Smart Car parking System using RFID module, Raspberry Pi 3, Added 16 X 2 Display, DC Motor.",
+            "System Backend is Coded in flask framework, frontend is in React & uses MVC Architecture",
+            "Use Postgresql as a DataBase to store Active Tag Detail & Car history"
+          ]
+        },
+        {
+          "title": "Weather App",
+          "tech": "React WebApp",
+          "website": "https://www.github.com/siddheshJungade",
+          "desc": [
+            "Created a website for Weather using HTML, CSS, JavaScript and ReactJS.",
+            "Features include the display of weather current Data of any city from openWeatherApi."
+          ]
+        },
+        {
+          "title": "Cryptocurrency Converter",
+          "tech": "Cross Platform Mobile App",
+          "website": "https://www.github.com/siddheshJungade",
+          "desc": [
+            "Created an App which run on android as well as on IOS using Flutter & Dart as frontend.",
+            "Features include the display of the Price of various cryptocurrency in USD and INR using Coin API."
+          ]
+        },
+        {
+          "title": "Siddhesh Jungade Portfolio Site",
+          "tech": "Javascript, React & GraphQL",
+          "website": "https://siddheshjungade.netlify.app",
+          "desc":[
+            "Portfolio Web app made using reactJs",
+            "hashnode blog is fatch using graphql"
+          ]
+  
+  
+        }
+      ]
+    }
+  }

@@ -15,11 +15,11 @@ import AboutNavbar from "./about-nav-bar";
 export const Hero = () => {
   return (
     <>
-      <section className="py-12 xl:py-24 h-full xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
+      <section className="py-5 h-full bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
         <div className="w-full container mx-auto">
-          <div className="flex flex-col xl:flex-row justify-between gap-8">
+          <div className="flex flex-col xl:flex-row justify-center md:justify-start gap-10">
             {/* text  */}
-            <div className="flex flex-col gap-4 justify-center mx-auto xl:mx-0 text-center xl:text-left">
+            <div className="flex flex-col gap-4 justify-center w-full xl:w-1/2 mx-auto xl:mx-0 text-center xl:text-left">
               <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
                 Software Developer
               </div>
@@ -28,7 +28,7 @@ export const Hero = () => {
                 <span className="font-extrabold">Siddhesh Jungade</span>
               </h1>
 
-              <p className="subtitle w-[550px] mx-auto xl:mx-0">
+              <p className=" w-full mx-auto xl:mx-0">
                 Crafting Scalable Solutions with the Power of JavaScript:
                 Turning Ideas into Reality with Precision and Speed.
               </p>
@@ -51,10 +51,10 @@ export const Hero = () => {
               />
             </div>
             {/* image  */}
-            <div className="hidden xl:block flex flex-row relative items-center w-[25rem] xl:w-[35rem] h-[25rem] xl:h-[35rem] justify-center">
+            <div className="hidden xl:block flex flex-row relative justify-self-start w-[25rem] h-[25rem] xl:w-[30rem]  xl:h-[30rem] justify-center">
               {/* badge  */}
               <Badge
-                containerStyles="absolute top-[24%] -left-[5rem] bg-black p-4 rounded-3xl"
+                containerStyles="absolute top-[12%] -left-[5rem] bg-black p-4 rounded-3xl"
                 icon={<RiBriefcase4Fill />}
                 endCountNum={2}
                 badgeText="Years Of Experience"
@@ -84,11 +84,6 @@ export const Hero = () => {
           {/* icon   */}
           <div className="flex w-full mt-10 justify-center left-2/4 botton-44 xl:bottom-12 animate-bounce">
             <RiArrowDownSLine className="text-3xl text-primary" />
-          </div>
-          <div className="w-full flex justify-center">
-            <div className="mt-8 w-full">
-              <AboutNavbar />
-            </div>
           </div>
         </div>
       </section>

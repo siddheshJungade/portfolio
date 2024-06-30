@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const workCategory = [
@@ -37,6 +36,7 @@ export default function WorkPageLayout({
           </div>
           {children}
         </div>
+     
       </main>
     </>
   );

@@ -1,3 +1,15 @@
+"use-client";
+import * as React from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Keyboard, Mousewheel, Navigation, Pagination } from "swiper/modules";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
+
 const skillList = [
   {
     type: "Language",
@@ -52,28 +64,40 @@ const skillList = [
   },
 ];
 
-export const Skills = () => {
+export function Skills() {
   return (
-    <>
-      <div className="w-full mt-6 flex flex-col sm:flex-row gap-2 justify-center">
-        {skillList.map((skillItem: any, idx: any) => {
+    <div className="w-full mt-6 grid rounded-3xl">
+      <Swiper
+        slidesPerView={1}
+        cssMode={true}
+        navigation={true}
+        // pagination={true}
+        mousewheel={true}
+        keyboard={true}
+        modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+        className="w-full grid justify-stretch"
+        breakpoints={{
+          640: {
+            slidesPerView: 4,
+          },
+        }}
+      >
+        {skillList.map((item: any, idx: number) => {
           return (
-            <>
-              <div className="w-1/2 sm:w-1/4 bg-slate-400 p-3 mx-auto rounded-3xl">
-                <h1 className="font-bold py-3 mt-2 text-lg ml-2 ">{skillItem.type}</h1>
+            <SwiperSlide key={idx}>
+              <Card className="p-3 mx-2 bg-slate-300 rounded-3xl">
+                <CardTitle className="ml-5">{item.type}</CardTitle>
 
-                <ul className="grid  grid-flow-rows gap-2">
-                  {skillItem?.values.map((item: any, _idx: number) => (
-                    <li key={_idx} className="p-2 rounded-full bg-slate-300 ">
-                      <span className="ml-3">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </>
+                <CardContent className="flex flex-wrap gap-2 mt-3">
+                  {item.values.map((skill: string, _idx: number) => {
+                    return <span className="py-1 px-3 rounded-full bg-blue-300"key={_idx}>{skill}</span>;
+                  })}
+                </CardContent>
+              </Card>
+            </SwiperSlide>
           );
         })}
-      </div>
-    </>
+      </Swiper>
+    </div>
   );
-};
+}
