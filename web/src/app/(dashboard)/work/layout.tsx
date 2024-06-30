@@ -21,9 +21,9 @@ export default function WorkPageLayout({
 }>) {
   return (
     <>
-      <main className="flex w-full min-h-screen items-start justify-start p-24">
+      <main className="flex w-full min-h-screen items-start justify-start p-10 md:p-20">
         <div className="w-full">
-          <div className="flex  gap-2">
+          <div className="flex justify-center md:justify-start gap-2">
             {workCategory.map((item, idx) => (
               <Link
                 key={idx}

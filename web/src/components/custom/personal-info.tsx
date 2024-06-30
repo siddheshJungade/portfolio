@@ -31,7 +31,7 @@ const infoData = [
   },
   {
     icon: <HomeIcon size={20} />,
-    text: "Pune ,Maharashtra , India ",
+    text: "Pune, Maharashtra , India ",
   },
 ];
 

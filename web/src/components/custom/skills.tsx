@@ -77,18 +77,20 @@ export function Skills() {
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className="w-full grid justify-stretch"
         breakpoints={{
-          640: {
+          1000: {
             slidesPerView: 4,
+          },
+          400: {
+            slidesPerView: 2,
           },
         }}
       >
         {skillList.map((item: any, idx: number) => {
           return (
             <SwiperSlide key={idx}>
-              <Card className="p-3 mx-2 bg-slate-300 rounded-3xl">
+              <Card className="p-3 h-full mx-2 bg-slate-300 rounded-3xl">
                 <CardTitle className="ml-5">{item.type}</CardTitle>
-
-                <CardContent className="flex flex-wrap gap-2 mt-3">
+                <CardContent className="flex flex-wrap   gap-2 mt-3">
                   {item.values.map((skill: string, _idx: number) => {
                     return <span className="py-1 px-3 rounded-full bg-blue-300"key={_idx}>{skill}</span>;
                   })}

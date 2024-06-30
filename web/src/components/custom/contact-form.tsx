@@ -2,6 +2,7 @@ import { Input } from "../ui/input";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/components/ui/use-toast";
 import { Textarea } from "../ui/textarea";
+import Script from "next/script";
 
 const inputFieldList = [
   {
@@ -23,11 +24,17 @@ const inputFieldList = [
 ];
 
 export const ContactForm = () => {
-  const { toast } = useToast();
+  // const { toast } = useToast();
+
+  const username = process.env.NEXT_PUBLIC_CALENDLY_USERNAME;
+  const showDetails: number =
+    process.env.NEXT_PUBLIC_CALENDLY_SHOW_DETAILS == "false" ? 1 : 0;
+  const showCookies: number =
+    process.env.NEXT_PUBLIC_CALENDLY_SHOW_COOKIES == "false" ? 1 : 0;
 
   return (
     <>
-      <form className="w-full grid gap-4">
+      {/* <form className="w-full grid gap-4">
         {inputFieldList.map((field, idx) => (
           <Input
             key={field.name}
@@ -48,7 +55,21 @@ export const ContactForm = () => {
         >
           Submit
         </Button>
-      </form>
+      </form> */}
+
+      <div
+        className="calendly-inline-widget w-screen h-screen"
+        data-url={`https://calendly.com/siddheshjungade/30min?hide_landing_page_details=${showDetails}&hide_gdpr_banner=${showCookies}`}
+        style={{
+          minWidth: "100%",
+          height: "700px",
+        }}
+      ></div>
+      <Script
+        type="text/javascript"
+        src="https://assets.calendly.com/assets/external/widget.js"
+        async
+      ></Script>
     </>
   );
 };
