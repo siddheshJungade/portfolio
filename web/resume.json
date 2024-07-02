@@ -1,0 +1,47 @@
+{
+    "link": {
+      "twitter":"https://twitter.com/siddheshjungade",
+      "mail": "mailto:siddheshjungade@gmail.com",
+      "github":"https://github.com/siddheshJungade",
+      "linkedin":"https://www.linkedin.com/in/siddheshjungade/",
+      "hashnode":"https://brothepro.hashnode.dev/",
+      "instagram":"https://www.instagram.com/siddheshjungade/"
+    },
+    "intro": ["Little Info About Me", "About"],
+    "education": {
+      "intro": ["Education", "Acadamic"],
+      "work": [
+        {
+          "Institute": "Government Collage Of Engineering,Yavatmal",
+          "Course": "Bachelor of Technology Computer Science",
+          "year": "2021 - 2022"
+        }
+      ]
+    },
+    "Experience": {
+      "intro": ["Experience", "Work"],
+      "work": [
+        {
+          "title": "Software Development Intern",
+          "organization": "Keen Embedded",
+          "website": "https://www.keenembed.com/",
+          "time": "(Jul 2021 - Present)",
+          "desc": [
+            "Worked on different Python and C++ project like Smart Car parking System using Python, Raspberry Pi 3 and RFID.",
+            "File transfer System using Python, Socket, Tikenter",
+            "Build KeenEmbedded Website"
+          ]
+        },
+        {
+          "title": "Python Intern",
+          "organization": "Uptrick Services Pvt. Ltd",
+          "website": "https://uptricksservices.com/",
+          "time": "(Jun 2019 - Jul 2019 )",
+          "desc": [
+            "Python intern and trainee where we build a web app using Django",
+            "Build WhatsApp bulk message shearing system using Python"
+          ]
+        }
+      ]
+    }
+  }

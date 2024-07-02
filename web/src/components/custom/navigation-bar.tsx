@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
-
+import resumeData from '../../../resume.json'
 const menuItems = [
   {
     name: "Work",
@@ -17,7 +17,7 @@ const menuItems = [
 export const NavigationBar = () => {
   const pathName = usePathname()
   return (
-    <nav className="w-[100%] p-4 bg-slate-100">
+    <nav className="w-[100%] p-2 bg-slate-100">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-5 md:flex-row items-center justify-between">
           <div className="flex items-center text-2xl">
@@ -27,7 +27,7 @@ export const NavigationBar = () => {
             <ul className="flex  items-center space-x-10">
               {menuItems.map((item, idx) => (
                 <li key={idx}>
-                  <Link href={item.route} className={ pathName.includes(item.route.replace("/blog","")) ? `disable underline`: ``}>{item.name}</Link>
+                  <Link href={item.route} className={ pathName.includes(item.route.replace("/blog","")) ? `disable underline underline-offset-[100%] decoration-4`: ``}>{item.name}</Link>
                 </li>
               ))}
             </ul>
@@ -35,6 +35,8 @@ export const NavigationBar = () => {
           <div>
             <Button
               className="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
+
+              onClick={() => window.open(resumeData.link.github,"_target")}
             >
               <svg
                 className="w-4 h-4 me-2"
