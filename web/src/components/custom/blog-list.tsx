@@ -4,6 +4,7 @@ import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { PaginationGroup } from "./pagination";
+import { LOADER } from "./loader";
 const Blog = () => {
   const [posts, setPosts] = useState<null | { publication: any }>(null);
   const [previousCourser, setPreviousCourser] = useState<string>("");
@@ -44,7 +45,7 @@ const Blog = () => {
     fetchPosts("");
   }, [previousCourser]);
 
-  return (
+  return posts ? (
     <div className="w-full grid gap-y-7">
       <div className="technology w-full justify-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2 mt-6">
         {posts &&
@@ -79,6 +80,8 @@ const Blog = () => {
       </div>
       <PaginationGroup onClickPrevious={() => {}} onClickNext={() => {}} />
     </div>
+  ) : (
+    <LOADER />
   );
 };
 

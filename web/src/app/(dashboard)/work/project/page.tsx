@@ -1,5 +1,6 @@
 "use client";
 import { ContactForm } from "@/components/custom/contact-form";
+import { LOADER } from "@/components/custom/loader";
 import Projects from "@/components/custom/projects";
 import { Button } from "@/components/ui/button";
 
@@ -19,8 +20,8 @@ const workCategory = [
 ];
 export default function Work() {
   return (
-    <main className="flex min-h-screen min-w-screen items-start justify-center ">
-      <Projects />
+    <main className="flex min-h-screen min-w-screen items-start justify-center">
+       <Projects />
     </main>
   );
 }

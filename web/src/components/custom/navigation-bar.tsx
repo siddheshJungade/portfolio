@@ -1,12 +1,9 @@
 "use client";
 import Link from "next/link";
 import { Button } from "../ui/button";
+import { usePathname } from "next/navigation";
 
 const menuItems = [
-  {
-    name: "Home",
-    route: "/",
-  },
   {
     name: "Work",
     route: "/work/blog",
@@ -18,8 +15,9 @@ const menuItems = [
 ];
 
 export const NavigationBar = () => {
+  const pathName = usePathname()
   return (
-    <nav className="p-4 bg-slate-100">
+    <nav className="w-[100%] p-4 bg-slate-100">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-5 md:flex-row items-center justify-between">
           <div className="flex items-center text-2xl">
@@ -29,7 +27,7 @@ export const NavigationBar = () => {
             <ul className="flex  items-center space-x-10">
               {menuItems.map((item, idx) => (
                 <li key={idx}>
-                  <Link href={item.route}>{item.name}</Link>
+                  <Link href={item.route} className={ pathName.includes(item.route.replace("/blog","")) ? `disable underline`: ``}>{item.name}</Link>
                 </li>
               ))}
             </ul>

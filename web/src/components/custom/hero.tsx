@@ -15,7 +15,7 @@ import AboutNavbar from "./about-nav-bar";
 export const Hero = () => {
   return (
     <>
-      <section className="py-5 h-full bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
+      <section className="py-2 h-full bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
         <div className="w-full container mx-auto">
           <div className="flex flex-col xl:flex-row justify-center md:justify-start gap-10">
             {/* text  */}

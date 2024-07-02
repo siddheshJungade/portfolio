@@ -1,6 +1,7 @@
+"use client";
 import { Input } from "../ui/input";
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast";
+import { toast, useToast } from "@/components/ui/use-toast";
 import { Textarea } from "../ui/textarea";
 import Script from "next/script";
 
@@ -34,42 +35,43 @@ export const ContactForm = () => {
 
   return (
     <>
-      {/* <form className="w-full grid gap-4">
-        {inputFieldList.map((field, idx) => (
-          <Input
-            key={field.name}
-            type={field.type}
-            placeholder={field.placeholder}
-            pattern={field?.pattern}
-          />
-        ))}
-        <Textarea placeholder="Type your message here." />
-        <Button
-          className="w-full"
-          onClick={() => {
-            toast({
-              title: "Thank you",
-              description: "I will contact u shortly",
-            });
+      <div className="w-full h-full flex mt-6 content-center justify-center">
+        <form className="w-full h-full md:w-[50%] grid gap-4">
+          {inputFieldList.map((field, idx) => (
+            <Input
+              key={field.name}
+              type={field.type}
+              placeholder={field.placeholder}
+              pattern={field?.pattern}
+            />
+          ))}
+          <Textarea placeholder="Type your message here." />
+          <Button
+            className="w-full"
+            onClick={() => {
+              toast({
+                title: "Thank you",
+                description: "I will contact u shortly",
+              });
+            }}
+          >
+            Submit
+          </Button>
+        </form>
+      </div>
+      {/* <div
+          className="calendly-inline-widget w-screen h-screen"
+          data-url={`https://calendly.com/siddheshjungade/30min?hide_landing_page_details=${showDetails}&hide_gdpr_banner=${showCookies}`}
+          style={{
+            minWidth: "100%",
+            height: "700px",
           }}
-        >
-          Submit
-        </Button>
-      </form> */}
-
-      <div
-        className="calendly-inline-widget w-screen h-screen"
-        data-url={`https://calendly.com/siddheshjungade/30min?hide_landing_page_details=${showDetails}&hide_gdpr_banner=${showCookies}`}
-        style={{
-          minWidth: "100%",
-          height: "700px",
-        }}
-      ></div>
+        ></div>
       <Script
         type="text/javascript"
         src="https://assets.calendly.com/assets/external/widget.js"
         async
-      ></Script>
+      ></Script> */}
     </>
   );
 };
