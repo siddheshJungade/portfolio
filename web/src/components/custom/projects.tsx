@@ -25,7 +25,7 @@ const Projects = () => {
     fetchProjects();
   }, []);
 
-  return projects? (
+  return projects ? (
     <div className="w-full justify-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2  mt-12">
       {projects?.items?.map((project: any, _idx: number) => {
         return (
@@ -46,15 +46,18 @@ const Projects = () => {
                 <i className="fa fa-brands fa-github"></i>
                 Repository
               </Button>
-              <Button
-                className="gap-x-2 bg-transparent text-gray-800 border-gray-400 border hover:bg-gray-100 rounded-lg"
-                onClick={() => {
-                  window.open(project.homepage, "_blank", "noopener");
-                }}
-              >
-                <i className="fa fa-globe"></i>
-                Live
-              </Button>
+
+              {project?.homepage && (
+                <Button
+                  className="gap-x-2 bg-transparent text-gray-800 border-gray-400 border hover:bg-gray-100 rounded-lg"
+                  onClick={() => {
+                    window.open(project.homepage, "_blank", "noopener");
+                  }}
+                >
+                  <i className="fa fa-globe"></i>
+                  Live
+                </Button>
+              )}
             </CardFooter>
           </Card>
         );
