@@ -15,7 +15,7 @@ export const Footer = () => {
             </a>
             . The source code is available on{" "}
             <a
-              href={""}
+              href={"https://github.com/siddheshJungade/portfolio"}
               target="_blank"
               rel="noreferrer"
               className="font-medium underline underline-offset-4"

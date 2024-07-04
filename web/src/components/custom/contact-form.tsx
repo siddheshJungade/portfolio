@@ -3,7 +3,9 @@ import { Input } from "../ui/input";
 import { Button } from "@/components/ui/button";
 import { toast, useToast } from "@/components/ui/use-toast";
 import { Textarea } from "../ui/textarea";
-import Script from "next/script";
+import { DevImg } from "./dev-img";
+import Image from "next/image";
+import { PersonalInfo } from "./personal-info";
 
 const inputFieldList = [
   {
@@ -35,8 +37,12 @@ export const ContactForm = () => {
 
   return (
     <>
-      <div className="w-full h-full flex mt-6 content-center justify-center">
-        <form className="w-full h-full md:w-[50%] grid gap-4">
+      <div className="w-full mx-auto h-full flex mt-10 justify-center gap-10">
+        <div className="hidden lg:block w-[600px] h-full">
+          <PersonalInfo />
+        </div>
+        <form className="w-[90%] h-full md:w-[40em] mt-3 flex flex-col justify-stretch gap-4">
+          <h1 className="font-bold text-4xl text-center"> Drop message </h1>
           {inputFieldList.map((field, idx) => (
             <Input
               key={field.name}
@@ -45,7 +51,10 @@ export const ContactForm = () => {
               pattern={field?.pattern}
             />
           ))}
-          <Textarea placeholder="Type your message here." />
+          <Textarea
+            className="h-[300px] xl:h-[120px] justify-self-stretch self-stretch"
+            placeholder="Type your message here."
+          />
           <Button
             className="w-full"
             onClick={() => {
@@ -66,12 +75,7 @@ export const ContactForm = () => {
             minWidth: "100%",
             height: "700px",
           }}
-        ></div>
-      <Script
-        type="text/javascript"
-        src="https://assets.calendly.com/assets/external/widget.js"
-        async
-      ></Script> */}
+        ></div> */}
     </>
   );
 };
