@@ -9,7 +9,7 @@ const Projects = () => {
   const [count, setCount] = useState(7);
   const fetchProjects = async () => {
     const response = await fetch(
-      "https://api.github.com/search/repositories?q=user:siddheshJungade+topic:porject",
+      "https://api.github.com/search/repositories?q=user:siddheshJungade+topic:project",
       {
         method: "Get",
         headers: {
