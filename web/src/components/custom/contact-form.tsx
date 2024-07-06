@@ -8,10 +8,6 @@ import Image from "next/image";
 import { PersonalInfo } from "./personal-info";
 import { FormEvent, useState } from "react";
 
-const { Client } = require("@notionhq/client");
-
-const notion = new Client({ auth: process.env.NOTION_API_KEY });
-
 const inputFieldList = [
   {
     name: "Name",
