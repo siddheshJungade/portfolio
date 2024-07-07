@@ -25,7 +25,7 @@ export default function WorkPageLayout({
   
   return (
     <>
-      <main className="flex w-full container min-h-screen items-start justify-start">
+      <main className="flex min-w-screen mt-2 min-h-screen items-start justify-start">
         <div className="w-full">
           <div className="flex justify-center md:justify-start gap-2 mt-4">
             {workCategory.map((item, idx) => (

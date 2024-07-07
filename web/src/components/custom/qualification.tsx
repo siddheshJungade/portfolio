@@ -54,9 +54,9 @@ export const Qualification = () => {
   return (
     <div className="w-full">
       {/* experience and education wrapper  */}
-      <div className="grid md:grid-cols-2 gap-y-8">
+      <div className="grid md:grid-cols-2 justify-start justify-start  gap-y-8">
         {/* experience  */}
-        <div className="flex flex-col gap-y-6">
+        <div className="flex flex-col items-start gap-y-6">
           <div className="flex gap-x-4 items-center text-[22px] text-primary">
             <Briefcase />
             <h4 className="capitalize font-medium">

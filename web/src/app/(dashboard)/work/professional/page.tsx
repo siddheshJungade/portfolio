@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Work() {
   return (
-    <main className="flex min-h-screen items-start justify-center p-10">
+    <main className="flex min-h-screen items-start justify-center my-10">
       <Qualification />
     </main>
   );

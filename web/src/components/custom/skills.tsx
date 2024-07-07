@@ -66,7 +66,7 @@ const skillList = [
 
 export function Skills() {
   return (
-    <div className="w-full mt-6 grid rounded-3xl">
+    <div className="w-full h-[420px]">
       <Swiper
         slidesPerView={1}
         cssMode={true}
@@ -75,7 +75,7 @@ export function Skills() {
         mousewheel={true}
         keyboard={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-        className="w-full grid justify-stretch"
+        className="w-full h-full grid my-1"
         breakpoints={{
           1000: {
             slidesPerView: 4,
@@ -87,12 +87,19 @@ export function Skills() {
       >
         {skillList.map((item: any, idx: number) => {
           return (
-            <SwiperSlide key={idx}>
-              <Card className="p-3 h-full mx-2 bg-slate-300 rounded-3xl">
-                <CardTitle className="ml-5">{item.type}</CardTitle>
+            <SwiperSlide key={idx} className=" ">
+              <Card className="p-3 h-[25em] mx-2 bg-slate-200 shadow-lg rounded-3xl">
+                <CardTitle className="ml-6">{item.type}</CardTitle>
                 <CardContent className="flex flex-wrap   gap-2 mt-3">
                   {item.values.map((skill: string, _idx: number) => {
-                    return <span className="py-1 px-3 rounded-full bg-blue-300"key={_idx}>{skill}</span>;
+                    return (
+                      <span
+                        className="py-1 px-3 rounded-full text-white bg-slate-600"
+                        key={_idx}
+                      >
+                        {skill}
+                      </span>
+                    );
                   })}
                 </CardContent>
               </Card>

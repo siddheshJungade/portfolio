@@ -51,7 +51,7 @@ const Blog = () => {
 
   return apiResponse ? (
     <div className="w-full grid gap-y-7">
-      <div className="technology w-full justify-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2 mt-6">
+      <div className="w-full justify-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-2 mt-6">
         {apiResponse &&
           apiResponse.posts.nodes.map((post: any, _idx: number) => {
             return (

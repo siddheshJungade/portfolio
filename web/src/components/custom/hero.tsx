@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 
 import {
@@ -11,6 +12,7 @@ import { Socials } from "./social";
 import { DevImg } from "./dev-img";
 import Badge from "./badge";
 import AboutNavbar from "./about-nav-bar";
+import resume from "../../../resume.json";
 
 export const Hero = () => {
   return (
@@ -38,11 +40,11 @@ export const Hero = () => {
                   <Button className="gap-x-2">Contact me</Button>
                 </Link>
 
-                <a href="/cv.pdf" download="cv.pdf">
-                  <Button variant="secondary" className="gap-x-2">
-                    Download CV
-                  </Button>
-                </a>
+                <Button variant="secondary" onClick={() => {
+                  window.open(resume.resume_link,"_target")
+                }} className="gap-x-2">
+                  Download CV
+                </Button>
               </div>
               {/* socials  */}
               <Socials
