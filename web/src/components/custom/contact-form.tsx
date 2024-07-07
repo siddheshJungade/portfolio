@@ -70,12 +70,12 @@ export const ContactForm = () => {
 
   return (
     <>
-      <div className="w-full mx-auto h-full flex mt-10 justify-center gap-10">
-        <div className="hidden lg:block w-[600px] h-full">
+      <div className="w-full mx-auto min-h-screen flex mt-10 justify-center gap-10">
+        <div className="hidden lg:block w-full h-full">
           <PersonalInfo />
         </div>
         <form
-          className="w-[90%] h-full md:w-[40em] mt-3 flex flex-col justify-stretch gap-4"
+          className="w-full md:mx-10 mx-5 mt-3 flex flex-col justify-stretch gap-4"
           onSubmit={(e: FormEvent) => contactFormHandler(e)}
         >
           <h1 className="font-bold text-4xl text-center"> Drop message </h1>

@@ -3,9 +3,8 @@ import { Hero } from "@/components/custom/hero";
 export default function Home() {
   return (
     <>
-      <main className="flex min-h-screen flex-col items-center justify-around p-10">
+      <main className="flex flex-col items-center justify-center ">
         <Hero />
-
         <AboutNavbar />
       </main>
     </>

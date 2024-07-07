@@ -12,7 +12,7 @@ export default function AboutNavbar() {
   ];
 
   return (
-    <Tabs defaultValue="skills" className="w-full md:w-[85%]">
+    <Tabs defaultValue="skills" className="w-full">
       <TabsList className="grid w-full md:w-1/2 h-[3rem] mx-auto grid-cols-2 gap-3 justify-center rounded-full">
         {menus.map((item, idx) => (
           <TabsTrigger
@@ -24,10 +24,10 @@ export default function AboutNavbar() {
           </TabsTrigger>
         ))}
       </TabsList>
-      <TabsContent value="skills" className="w-full mx-auto">
+      <TabsContent value="skills" className="w-full mx-auto py-5">
         <Skills />
       </TabsContent>
-      <TabsContent value="about" className="w-full mx-auto">
+      <TabsContent value="about" className="w-full mx-auto py-5">
         <PersonalInfo />
       </TabsContent>
     </Tabs>

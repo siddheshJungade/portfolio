@@ -27,8 +27,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <NavigationBar />
-        {children}
-
+        <div className="container ">{children}</div>
         <Footer />
         <Toaster />
       </body>

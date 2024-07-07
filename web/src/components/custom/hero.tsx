@@ -15,11 +15,11 @@ import AboutNavbar from "./about-nav-bar";
 export const Hero = () => {
   return (
     <>
-      <section className="py-2 h-full bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
-        <div className="w-full container mx-auto">
-          <div className="flex flex-col xl:flex-row justify-center md:justify-start gap-10">
+      <section className="w-full h-full bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
+        <div className="flex flex-col min-h-screen justify-around w-full container mx-auto">
+          <div className="w-full h-full my-10 flex flex-col xl:flex-row justify-center md:justify-around  items-center gap-10">
             {/* text  */}
-            <div className="flex flex-col gap-4 justify-center w-full xl:w-1/2 mx-auto xl:mx-0 text-center xl:text-left">
+            <div className="flex flex-col gap-4 justify-center mx-auto xl:mx-0 text-center xl:text-left">
               <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
                 Software Developer
               </div>
@@ -28,7 +28,7 @@ export const Hero = () => {
                 <span className="font-extrabold">Siddhesh Jungade</span>
               </h1>
 
-              <p className=" w-full mx-auto xl:mx-0">
+              <p className="w-full md:w-[600px] mx-auto xl:mx-0">
                 Crafting Scalable Solutions with the Power of JavaScript:
                 Turning Ideas into Reality with Precision and Speed.
               </p>
@@ -51,15 +51,14 @@ export const Hero = () => {
               />
             </div>
             {/* image  */}
-            <div className="hidden xl:block flex flex-row relative justify-self-start w-[25rem] h-[25rem] xl:w-[30rem]  xl:h-[30rem] justify-center">
-              {/* badge  */}
+            <div className="hidden xl:block relative min-w-screen h-full ">
               <Badge
                 containerStyles="absolute top-[12%] -left-[5rem] bg-black p-4 rounded-3xl"
                 icon={<RiBriefcase4Fill />}
                 endCountNum={2}
                 badgeText="Years Of Experience"
               />
-              {/* badge 2  */}
+
               <Badge
                 containerStyles="absolute top-[80%] -left-[1rem] bg-black p-4 rounded-3xl"
                 icon={<RiTodoFill />}
@@ -67,22 +66,24 @@ export const Hero = () => {
                 // endCountText={'k'}
                 badgeText="Finished Projects"
               />
-              {/* badge 3  */}
+
               <Badge
-                containerStyles="absolute top-[55%] -right-[9rem] bg-black p-4 rounded-3xl"
+                containerStyles="absolute top-[55%] -right-[4rem] bg-black p-4 rounded-3xl"
                 icon={<RiTeamFill />}
                 endCountNum={3}
                 // endCountText={'k'}
                 badgeText="Happy Clients"
               />
-              <DevImg
-                containerStyles="bg-hero_shape self-center w-full h-full z-[-1] bg-no-repeat relative bg-bottom"
-                imgSrc="/assets/images/profile.png"
-              />
+              <div className="w-[30rem] h-[30rem]">
+                <DevImg
+                  containerStyles="relative w-full h-full z-[-1]"
+                  imgSrc="/assets/images/profile.png"
+                />
+              </div>
             </div>
           </div>
           {/* icon   */}
-          <div className="flex w-full mt-10 justify-center left-2/4 botton-44 xl:bottom-12 animate-bounce">
+          <div className="flex w-full justify-center  animate-bounce">
             <RiArrowDownSLine className="text-3xl text-primary" />
           </div>
         </div>
