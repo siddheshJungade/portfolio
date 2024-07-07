@@ -75,7 +75,7 @@ export const ContactForm = () => {
           <PersonalInfo />
         </div>
         <form
-          className="w-full md:mx-10 mx-5 mt-3 flex flex-col justify-stretch gap-4"
+          className="w-full md:mx-10  mt-3 flex flex-col justify-stretch gap-4"
           onSubmit={(e: FormEvent) => contactFormHandler(e)}
         >
           <h1 className="font-bold text-4xl text-center"> Drop message </h1>
