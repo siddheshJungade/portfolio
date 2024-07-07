@@ -24,7 +24,7 @@ export default function AboutNavbar() {
           </TabsTrigger>
         ))}
       </TabsList>
-      <TabsContent value="skills" className="w-full h-full mx-auto py-2">
+      <TabsContent value="skills" className="w-full mx-auto py-2">
         <Skills />
       </TabsContent>
       <TabsContent value="about" className="w-full mx-auto py-2">

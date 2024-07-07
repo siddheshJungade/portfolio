@@ -26,10 +26,10 @@ const Projects = () => {
   }, []);
 
   return projects ? (
-    <div className="w-full justify-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2  mt-12">
+    <div className="w-full justify-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mt-12">
       {projects?.items?.map((project: any, _idx: number) => {
         return (
-          <Card className=" grid w-full" key={_idx}>
+          <Card className="grid w-full" key={_idx}>
             <CardHeader color="" className=" font-bold text-lg">
               {project.name}
             </CardHeader>

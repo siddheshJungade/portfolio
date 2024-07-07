@@ -37,7 +37,7 @@ const infoData = [
 
 export const PersonalInfo = () => {
   return (
-    <Card className="w-full h-full mx-auto bg-slate-200 rounded-3xl">
+    <Card className="w-full mb-10 h-full mx-auto bg-slate-200 rounded-3xl">
       <CardTitle className="m-5 ">
         Unmatched Service Quality for Over 2 years
       </CardTitle>

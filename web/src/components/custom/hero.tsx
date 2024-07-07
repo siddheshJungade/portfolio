@@ -53,16 +53,16 @@ export const Hero = () => {
               />
             </div>
             {/* image  */}
-            <div className="hidden xl:block relative min-w-screen h-full ">
+            <div className="relative min-w-screen h-full ">
               <Badge
-                containerStyles="absolute top-[12%] -left-[5rem] bg-black p-4 rounded-3xl"
+                containerStyles="hidden md:block absolute top-[12%] -left-[5rem] bg-black p-4 rounded-3xl"
                 icon={<RiBriefcase4Fill />}
                 endCountNum={2}
                 badgeText="Years Of Experience"
               />
 
               <Badge
-                containerStyles="absolute top-[80%] -left-[1rem] bg-black p-4 rounded-3xl"
+                containerStyles="hidden md:block absolute top-[80%] -left-[1rem] bg-black p-4 rounded-3xl"
                 icon={<RiTodoFill />}
                 endCountNum={5}
                 // endCountText={'k'}
@@ -70,13 +70,13 @@ export const Hero = () => {
               />
 
               <Badge
-                containerStyles="absolute top-[55%] -right-[4rem] bg-black p-4 rounded-3xl"
+                containerStyles="hidden md:block absolute top-[55%] -right-[4rem] bg-black p-4 rounded-3xl"
                 icon={<RiTeamFill />}
                 endCountNum={3}
                 // endCountText={'k'}
                 badgeText="Happy Clients"
               />
-              <div className="w-[30rem] h-[30rem]">
+              <div className="w-[20rem] h-[20rem] md:w-[30rem] md:h-[30rem]">
                 <DevImg
                   containerStyles="relative w-full h-full z-[-1]"
                   imgSrc="/assets/images/profile.png"
