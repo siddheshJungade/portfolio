@@ -93,7 +93,9 @@ const Blog = () => {
       />
     </div>
   ) : (
-    <LOADER />
+    <div className="mt-6">  
+      <LOADER />
+    </div>   
   );
 };
 

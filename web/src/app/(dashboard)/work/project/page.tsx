@@ -20,7 +20,7 @@ const workCategory = [
 ];
 export default function Work() {
   return (
-    <main className="flex min-h-screen min-w-screen items-start justify-center">
+    <main className="flex min-h-screen min-w-screen items-start justify-center mb-5">
        <Projects />
     </main>
   );

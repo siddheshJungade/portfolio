@@ -64,7 +64,8 @@ const Projects = () => {
       })}
     </div>
   ) : (
-    <LOADER />
+    <div className="mt-6">  <LOADER /> </div>
+  
   );
 };
 
