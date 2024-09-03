@@ -4,7 +4,11 @@
     "turbo": "^2.1.0"
   },
   "scripts": {
-    "web:dev": "turbo run dev --filter=web"
+    "web:dev": "turbo run dev --filter=web",
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint"
   },
   "packageManager": "npm@10.7.0",
   "workspaces": [
