@@ -4,6 +4,7 @@ import "./globals.css";
 import { NavigationBar } from "@/components/custom/navigation-bar";
 import { Toaster } from "@/components/ui/toaster";
 import { Footer } from "@/components/custom/footer";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,24 @@ export default function RootLayout({
         <link
           rel="apple-touch-icon"
           href="/apple-icon.png"
+        />
+
+        {/* Google tag (gtag.js) */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-28SM99QG7P"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-28SM99QG7P');
+            `,
+          }}
         />
       </head>
       <body className={inter.className}>
