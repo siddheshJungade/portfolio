@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "devDependencies": {
+    "turbo": "^2.1.0"
+  },
+  "scripts": {
+    "web:dev": "turbo run dev --filter=web"
+  },
+  "packageManager": "npm@10.7.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}

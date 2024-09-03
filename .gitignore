@@ -1,39 +1,39 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-web/node_modules
-web/.pnp
-web/.pnp.js
-web/.yarn/install-state.gz
+apps/web/node_modules
+apps/web/.pnp
+apps/web/.pnp.js
+apps/web/.yarn/install-state.gz
 
 # testing
-web/coverage
+apps/web/coverage
 
 # next.js
-web/.next/
-web/out/
+apps/web/.next/
+apps/web/out/
 
 # production
-web/build
+apps/web/build
 
 # misc
-web/.DS_Store
-web/*.pem
+apps/web/.DS_Store
+apps/web/*.pem
 
 # debug
-web/npm-debug.log*
-web/yarn-debug.log*
-web/yarn-error.log*
+apps/web/npm-debug.log*
+apps/web/yarn-debug.log*
+apps/web/yarn-error.log*
 
 # local env files
-web/.env*.local
+apps/web/.env*.local
 
 # vercel
-web/.vercel
+apps/web/.vercel
 
 # typescript
-web/*.tsbuildinfo
-web/next-env.d.ts
+apps/web/*.tsbuildinfo
+apps/web/next-env.d.ts
 
 
 
@@ -76,3 +76,7 @@ app/*.sublime-workspace
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+.turbo
+
+node_modules
