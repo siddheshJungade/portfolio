@@ -1,0 +1,8 @@
+
+[build]
+  base = "apps/"
+  publish = ".next/"
+
+
+[context.deploy-preview]
+  publish = ".next/"
