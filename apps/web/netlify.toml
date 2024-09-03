@@ -1,5 +1,5 @@
 
 [build]
   base = "apps/web"
-  publish = "/.next"
+  publish = "apps/web/.next"
 
