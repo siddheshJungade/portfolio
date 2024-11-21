@@ -37,14 +37,14 @@ export const Hero = () => {
               {/* buttons  */}
               <div className="flex flex-col gap-3 md:flex-row mx-auto xl:mx-0">
                 <Link href={"/contact"}>
-                  <Button className="gap-x-2">Contact me</Button>
+                  <Button className="gap-x-2">Hire Me</Button>
                 </Link>
 
-                <Button variant="secondary" onClick={() => {
+                {/* <Button variant="secondary" onClick={() => {
                   window.open(resume.resume_link,"_target")
                 }} className="gap-x-2">
                   Download CV
-                </Button>
+                </Button> */}
               </div>
               {/* socials  */}
               <Socials
