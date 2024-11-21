@@ -72,9 +72,11 @@ export const NavigationBar = () => {
                   onClick={() => setIsDrawerOn(false)}
                   className={
                     pathName.includes(item.route.replace("/blog", ""))
-                      ? `disable underline underline-offset-2 md:underline-offset-[100%] decoration-2 md:decoration-4`
-                      : ``
+                                   ? `relative after:absolute after:top-5 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-100 after:bg-black after:transition-transform after:duration-300 after:ease-in-out`
+                      : `text-gray-500 relative after:absolute after:top-5 after:left-0 after:h-[2px] after:w-full after:origin-left after:scale-x-0 `
                   }
+                  // ? `disable underline underline-offset-2 md:underline-offset-[100%] decoration-2 md:decoration-4 after:scale-x-0 after:bg-black after:scale-x-100 after:transition-transform after:duration-300 after:ease-in-out `
+                  // : ``
                 >
                   {item.name}
                 </Link>
