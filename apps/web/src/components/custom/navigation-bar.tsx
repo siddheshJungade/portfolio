@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 import resumeData from "../../../resume.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const menuItems = [
   {
     name: "Work",
@@ -17,9 +17,30 @@ const menuItems = [
 
 export const NavigationBar = () => {
   const [isDrawerOn, setIsDrawerOn] = useState<boolean>(false);
+  const [isVisible, setIsVisible] = useState<boolean>(true);
+  const [lastScrollY, setLastScrollY] = useState<number>(0);
   const pathName = usePathname();
+
+
+
+  useEffect(() => {
+    const handleScroll: any = () => {
+      if (window.scrollY < lastScrollY) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+      setLastScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+  
   return (
-    <nav className="sticky z-30  transition-all top-0 w-full p-2 bg-white shadow-md md:shadow-none">
+    <nav className={`sticky z-30  transition-all top-0 w-full p-2 bg-white  ${isVisible ? '' : 'shadow-xl'}`}>
       <div className="flex md:mx-10 mx-auto flex-col md:flex-row  items-center justify-between">
         <div className="w-full flex justify-between text-2xl md:text-4xl">
           <Link href="/" onClick={() => setIsDrawerOn(false)} className="font-bold text-gray-900 dark:text-white">
