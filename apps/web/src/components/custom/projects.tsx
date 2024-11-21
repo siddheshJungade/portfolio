@@ -3,6 +3,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { Card, CardContent, CardFooter, CardHeader } from "../ui/card";
 import { Button } from "../ui/button";
 import { LOADER } from "./loader";
+import { toSpaceCase } from "@/utils/convertor";
 
 const Projects = () => {
   const [projects, setProjects] = useState<any>(null);
@@ -31,7 +32,7 @@ const Projects = () => {
         return (
           <Card className="grid w-full" key={_idx}>
             <CardHeader color="" className=" font-bold text-lg">
-              {project.name}
+              {toSpaceCase(project?.name || "")}
             </CardHeader>
             <CardContent>
               <h5 className=" mb-2">{project.description}</h5>
