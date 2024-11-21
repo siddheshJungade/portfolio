@@ -69,7 +69,7 @@ const Blog = () => {
                 </CardContent>
                 <CardFooter className="pt-0">
                   <Button
-                    className="gap-x-2  border  rounded-lg"
+                    className="gap-x-2  border  rounded-lg bg-[#24292F]/100 hover:bg-[#24292F] hover:shadow-xl"
                     onClick={() => window.open(post.url, "_blank", "noopener")}
                   >
                     <i className="fa fa-thin fa-book"></i>

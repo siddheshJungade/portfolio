@@ -98,7 +98,7 @@ export const ContactForm = () => {
               setContactObj({ ...contactObj, message: e.target.value })
             }
           />
-          <Button className="w-full">Submit</Button>
+          <Button className="w-full  hover:shadow-xl">Submit</Button>
         </form>
       </div>
       {/* <div

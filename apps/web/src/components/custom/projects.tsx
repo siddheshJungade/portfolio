@@ -39,7 +39,7 @@ const Projects = () => {
             </CardContent>
             <CardFooter className="flex w-full pt-0 gap-x-2">
               <Button
-                className="gap-x-2 text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30"
+                className="gap-x-2 text-white bg-[#24292F] hover:bg-[#24292F]/90 hover:shadow-xl focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30"
                 onClick={() =>
                   window.open(project.html_url, "_blank", "noopener")
                 }
@@ -50,7 +50,7 @@ const Projects = () => {
 
               {project?.homepage && (
                 <Button
-                  className="gap-x-2 bg-transparent text-gray-800 border-gray-400 border hover:bg-gray-100 rounded-lg"
+                  className="gap-x-2 bg-transparent hover:shadow-xl text-gray-800 border-gray-400 border hover:bg-gray-100 rounded-lg"
                   onClick={() => {
                     window.open(project.homepage, "_blank", "noopener");
                   }}
